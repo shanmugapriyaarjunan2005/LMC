@@ -1,0 +1,62 @@
+INP
+        STA A
+        SUB HUN
+        BRP RUN
+        LDA A
+        SUB TEN
+        BRP MOV
+        STA B
+        LDA A
+        BRA EXIT
+MOV     STA B
+        LDA A
+LOOP    LDA C
+        ADD ONE
+        STA C
+        LDA B
+        SUB TEN
+        BRP NXT
+NXT     STA B
+        BRP LOOP
+        LDA B
+        ADD C
+        STA N
+        BRP FIN
+FIN     LDA N
+        ADD TEN
+        STA N
+        BRP EXIT
+EXIT    OUT
+        BRA HALT
+RUN     STA B
+REPEAT  STA B
+        LDA C
+        ADD ONE
+        STA C
+        LDA B
+        SUB HUN
+        BRP REPEAT
+        LDA B
+STORE   STA B
+        LDA E
+        ADD ONE
+        STA E
+        LDA B
+        SUB TEN
+        BRP STORE
+        LDA B
+        ADD C
+        ADD E
+        SUB ONE
+        OUT
+HALT    HLT
+HUN     DAT 100
+TEN     DAT 010
+A       DAT
+B       DAT
+C       DAT 000
+ONE     DAT 001
+E       DAT 000
+D       DAT
+F       DAT
+N       DAT
