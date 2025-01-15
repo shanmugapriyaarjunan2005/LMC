@@ -1,0 +1,8 @@
+INP 
+        STA LIMIT
+LOOP    OUT 
+        SUB ONE
+        BRP LOOP
+        HLT
+ONE     DAT 001
+LIMIT   DAT
