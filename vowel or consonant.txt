@@ -1,0 +1,63 @@
+INP
+        STA A 
+        LDA B
+        LDA C
+        LDA D
+        LDA E
+        LDA F
+        LDA G
+        LDA H
+        LDA I
+        LDA J
+        LDA K
+        LDA A
+        SUB B
+        BRZ RES
+        LDA A
+        SUB C
+        BRZ RES 
+        LDA A
+        SUB D
+        BRZ RES 
+        LDA A
+        SUB E
+        BRZ RES 
+        LDA A
+        SUB F
+        BRZ RES 
+        LDA A
+        SUB G
+        BRZ RES 
+        LDA A
+        SUB H
+        BRZ RES 
+        LDA A
+        SUB I
+        BRZ RES 
+        LDA A 
+        SUB J
+        BRZ RES 
+        LDA A
+        SUB K
+        BRZ RES 
+        LDA A
+        BRA LOOP
+RES     LDA ONE
+        BRA FIN
+LOOP    LDA ZERO
+FIN     OUT 
+        HLT
+A       DAT
+ONE     DAT 001
+ZERO    DAT 000
+B       DAT 065
+C       DAT 069
+D       DAT 073
+E       DAT 079
+F       DAT 085
+G       DAT 097
+H       DAT 101
+I       DAT 105
+J       DAT 111
+K       DAT 117
+
