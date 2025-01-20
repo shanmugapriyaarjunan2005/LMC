@@ -1,0 +1,19 @@
+INP
+        STA A
+        LDA S
+        LDA A
+LOOP    STA B
+        OUT
+        LDA S
+        SUB ONE
+        BRZ MOV
+        STA S 
+        LDA B
+        ADD A
+        BRP LOOP
+MOV     LDA B
+        HLT
+A       DAT
+B       DAT 
+S       DAT 010
+ONE     DAT 001
