@@ -1,0 +1,24 @@
+ INP
+        STA A 
+REP     SUB TWO
+        BRZ MOV
+        BRP REP
+        BRA NXT
+MOV     LDA A
+        SUB ONE
+        STA A
+NXT     LDA A
+LOOP    SUB TWO
+        STA B
+        ADD A
+        STA A
+        LDA B
+        BRP LOOP
+        LDA A 
+        ADD ONE
+        OUT 
+        HLT
+A       DAT
+B       DAT
+ONE     DAT 001
+TWO     DAT 002
