@@ -1,0 +1,31 @@
+INP
+        STA A
+        STA B
+        SUB ONE
+        BRZ ZERO
+        ADD ONE
+ROT     SUB TWO
+        BRZ CIR
+        BRP ROT
+        STA C
+        ADD B
+        STA B 
+        BRP MOV
+CIR     ADD B
+MOV     STA A
+LOOP    SUB TWO
+        STA B
+        BRZ VAL
+        ADD A
+        STA A
+        SUB A
+        ADD B
+        BRP LOOP
+VAL     ADD A
+ZERO    OUT
+        HLT
+TWO     DAT 002
+ONE     DAT 001
+A       DAT
+B       DAT
+C       DAT
