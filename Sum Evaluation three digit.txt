@@ -18,3 +18,8 @@ RES     SUB D
 VAL     OUT 
         HLT
 NONE    DAT -001
+ONE     DAT 001
+A       DAT
+B       DAT 
+C       DAT 
+D       DAT
