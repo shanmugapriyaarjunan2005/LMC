@@ -1,0 +1,20 @@
+INP
+        STA A
+        INP
+        STA B
+        INP 
+        STA C
+        ADD A
+        ADD B
+        STA D
+        BRZ VAL
+        BRP RES
+        SUB D
+        ADD NONE
+        STA D
+        BRA VAL
+RES     SUB D
+        ADD ONE
+VAL     OUT 
+        HLT
+NONE    DAT -001
