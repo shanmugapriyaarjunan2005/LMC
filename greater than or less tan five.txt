@@ -1,0 +1,22 @@
+INP
+        STA A
+        SUB FIVE
+        STA B
+        BRP LOOP
+        ADD A
+        STA B
+        BRP CIR
+        ADD FIVE
+        STA B
+        SUB B
+        BRP FIN
+CIR     SUB B
+FIN     ADD A
+        BRP MOV
+LOOP    SUB B
+        ADD FIVE
+MOV     OUT
+        HLT
+FIVE    DAT 005
+A       DAT
+B       DAT
