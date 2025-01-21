@@ -1,0 +1,40 @@
+LDA B
+        LDA C
+        LDA D
+LOOP    LDA A
+        STA A
+        OUT
+        LDA B
+        SUB ONE
+        STA B
+        BRP LOOP
+        LDA E 
+MOV     LDA C
+        STA C
+        OUT
+        LDA E
+        SUB ONE
+        BRP EXP
+        STA E
+        BRP MOV
+EXP     LDA C 
+        OUT 
+ROTT    LDA F
+        STA F
+        OUT
+        LDA G
+        SUB ONE
+        BRP NXT
+NXT     STA G
+        BRP ROTT
+        LDA F
+        OUT
+        HLT
+A       DAT 001
+B       DAT 003
+ONE     DAT 001
+E       DAT 002
+C       DAT 002
+D       DAT 003
+F       DAT 003
+G       DAT 002
